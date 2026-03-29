@@ -346,7 +346,7 @@ em {
 .hero {
   position: relative;
   min-height: 100svh;
-    padding-top: 50px;
+    padding-top: 30px;
   display: flex;
   align-items: center;
   overflow: hidden;
