@@ -650,45 +650,48 @@ em {
   background-position: center;
 }
 
-/* Slides com gradientes visuais (substituir por imagens reais) */
+/* Slides — Espaço 1 (Rústico) */
 .slide-rustico-1 {
-  background: 
-    linear-gradient(160deg, #1A3A1A 0%, #2D5A2A 40%, #4A7A40 70%, #3D6835 100%);
+  background-image: url('fotos-recanto1/ceremonia-no-espa%C3%A7o.JPG');
+  background-size: cover;
+  background-position: center;
 }
 
 .slide-rustico-2 {
-  background: 
-    linear-gradient(135deg, #1A4A6A 0%, #2A6A8A 40%, #1A9A9A 70%, #0A7A8A 100%);
+  background-image: url('fotos-recanto1/espa%C3%A7o-decorado.JPG');
+  background-size: cover;
+  background-position: center;
 }
 
 .slide-rustico-3 {
-  background: 
-    linear-gradient(145deg, #4A2A10 0%, #6A3A18 40%, #8A5A2A 70%, #7A4A20 100%);
+  background-image: url('fotos-recanto1/festa-no-espa%C3%A7o.webp');
+  background-size: cover;
+  background-position: center;
 }
 
 .slide-rustico-4 {
-  background: 
-    linear-gradient(155deg, #2A4A2A 0%, #3A6A3A 40%, #5A8A50 70%, #4A7A40 100%);
+  background-image: url('fotos-recanto1/piscina.JPG');
+  background-size: cover;
+  background-position: center;
 }
 
+/* Slides — Espaço 2 (Sofisticado) */
 .slide-sofisticado-1 {
-  background: 
-    linear-gradient(145deg, #2A1A2A 0%, #4A1A3A 40%, #6A1A4A 70%, #8A2A5A 100%);
+  background-image: url('fotos-recanto2/salao-climatizado.JPG');
+  background-size: cover;
+  background-position: center;
 }
 
 .slide-sofisticado-2 {
-  background: 
-    linear-gradient(135deg, #1A2A1A 0%, #2A4A2A 40%, #4A7A3A 70%, #5A8A4A 100%);
+  background-image: url('fotos-recanto2/jardim.JPG');
+  background-size: cover;
+  background-position: center;
 }
 
 .slide-sofisticado-3 {
-  background: 
-    linear-gradient(150deg, #3A1A1A 0%, #5A1A2A 40%, #7A2A3A 70%, var(--vinho) 100%);
-}
-
-.slide-sofisticado-4 {
-  background: 
-    linear-gradient(140deg, #1A1A2A 0%, #2A2A4A 40%, #4A3A6A 70%, #3A2A5A 100%);
+  background-image: url('fotos-recanto2/mesa-posta.JPG');
+  background-size: cover;
+  background-position: center;
 }
 
 /* Overlay e caption em cada slide */
