@@ -194,9 +194,82 @@
     startAuto();
   }
 
-  // Inicializa os dois carrosseis da página
-  initCarousel('carousel-1', 'dots-1');
-  initCarousel('carousel-2', 'dots-2');
+  // Carrega content.json e aplica no site antes de inicializar os carrosseis
+  applyCMS().then(() => {
+    initCarousel('carousel-1', 'dots-1');
+    initCarousel('carousel-2', 'dots-2');
+  });
+
+
+  /* ─────────────────────────────────────────────
+     CMS: lê content.json e aplica textos + fotos
+  ───────────────────────────────────────────── */
+  async function applyCMS() {
+    let data;
+    try {
+      const r = await fetch('content.json?v=' + Date.now());
+      if (!r.ok) return;
+      data = await r.json();
+    } catch (e) {
+      return; // sem content.json — usa conteúdo padrão do HTML
+    }
+
+    applyTextos(data);
+    applyCarousel(data.carousel1, 'carousel-1');
+    applyCarousel(data.carousel2, 'carousel-2');
+  }
+
+  function applyTextos(d) {
+    const set = (sel, val) => { const el = document.querySelector(sel); if (el && val) el.textContent = val; };
+
+    set('.google-badge-text', d.hero?.badge);
+    set('.hero-eyebrow',      d.hero?.eyebrow);
+    set('.hero-subtitle',     d.hero?.subtitle);
+
+    const descs = document.querySelectorAll('.sobre-desc');
+    if (descs[0] && d.sobre?.desc1) descs[0].textContent = d.sobre.desc1;
+    if (descs[1] && d.sobre?.desc2) descs[1].textContent = d.sobre.desc2;
+
+    const e1Info = document.querySelector('#e1-title')?.closest('.espaco-info');
+    if (e1Info) {
+      const e1Tag  = e1Info.querySelector('.espaco-tag');
+      const e1Desc = e1Info.querySelector('.espaco-desc');
+      if (e1Tag  && d.espaco1?.tag)  e1Tag.textContent  = d.espaco1.tag;
+      if (e1Desc && d.espaco1?.desc) e1Desc.textContent = d.espaco1.desc;
+    }
+
+    const e2Info = document.querySelector('#e2-title')?.closest('.espaco-info');
+    if (e2Info) {
+      const e2Tag  = e2Info.querySelector('.espaco-tag');
+      const e2Desc = e2Info.querySelector('.espaco-desc');
+      if (e2Tag  && d.espaco2?.tag)  e2Tag.textContent  = d.espaco2.tag;
+      if (e2Desc && d.espaco2?.desc) e2Desc.textContent = d.espaco2.desc;
+    }
+  }
+
+  function applyCarousel(slides, trackId) {
+    if (!slides || slides.length === 0) return;
+    const track = document.getElementById(trackId);
+    if (!track) return;
+    track.innerHTML = '';
+    slides.forEach(slide => {
+      const el = document.createElement('div');
+      el.className = 'carousel-slide';
+      el.setAttribute('role', 'img');
+      el.setAttribute('aria-label', slide.legenda || 'Foto do espaço');
+      el.style.backgroundImage    = `url('${slide.foto}')`;
+      el.style.backgroundSize     = 'cover';
+      el.style.backgroundPosition = 'center';
+      const overlay = document.createElement('div');
+      overlay.className = 'slide-overlay';
+      const caption = document.createElement('span');
+      caption.className   = 'slide-caption';
+      caption.textContent = slide.legenda || '';
+      overlay.appendChild(caption);
+      el.appendChild(overlay);
+      track.appendChild(el);
+    });
+  }
 
 
   /* ─────────────────────────────────────────────

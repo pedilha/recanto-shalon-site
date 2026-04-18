@@ -17,35 +17,14 @@
     "desc": "Sofisticação e requinte em cada detalhe. Salão fechado, climatizado e com boa acústica, ideal para cerimônias formais. O jardim instagramável é o cenário perfeito para fotos memoráveis de casamentos, formaturas e festas de 15 anos."
   },
   "carousel1": [
-    {
-      "foto": "fotos-recanto1/ceremonia-no-espa%C3%A7o.JPG",
-      "legenda": "Cerimônia no espaço"
-    },
-    {
-      "foto": "fotos-recanto1/espa%C3%A7o-decorado.JPG",
-      "legenda": "Espaço decorado"
-    },
-    {
-      "foto": "fotos-recanto1/festa-no-espa%C3%A7o.webp",
-      "legenda": "Festa no espaço"
-    },
-    {
-      "foto": "fotos-recanto1/piscina.JPG",
-      "legenda": "Área da piscina"
-    }
+    { "foto": "fotos-recanto1/ceremonia-no-espa%C3%A7o.JPG", "legenda": "Cerimônia no espaço" },
+    { "foto": "fotos-recanto1/espa%C3%A7o-decorado.JPG",     "legenda": "Espaço decorado" },
+    { "foto": "fotos-recanto1/festa-no-espa%C3%A7o.webp",    "legenda": "Festa no espaço" },
+    { "foto": "fotos-recanto1/piscina.JPG",                  "legenda": "Área da piscina" }
   ],
   "carousel2": [
-    {
-      "foto": "fotos-recanto2/salao-climatizado.JPG",
-      "legenda": "Salão climatizado e elegante"
-    },
-    {
-      "foto": "fotos-recanto2/jardim.JPG",
-      "legenda": "Jardim instagramável exclusivo"
-    },
-    {
-      "foto": "fotos-recanto2/mesa-posta.JPG",
-      "legenda": "Mesa posta com requinte"
-    }
+    { "foto": "fotos-recanto2/salao-climatizado.JPG", "legenda": "Salão climatizado e elegante" },
+    { "foto": "fotos-recanto2/jardim.JPG",            "legenda": "Jardim instagramável exclusivo" },
+    { "foto": "fotos-recanto2/mesa-posta.JPG",        "legenda": "Mesa posta com requinte" }
   ]
 }
