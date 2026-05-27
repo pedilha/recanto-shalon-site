@@ -104,7 +104,7 @@ em {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
-  transition: all 0.3s var(--ease);
+  transition: all 0.3s var(--ease-out);
   cursor: pointer;
   border: none;
   white-space: nowrap;
@@ -289,7 +289,7 @@ em {
   height: 2px;
   background: var(--gold-light);
   border-radius: 2px;
-  transition: all 0.3s var(--ease);
+  transition: all 0.3s var(--ease-out);
   transform-origin: center;
 }
 
@@ -538,7 +538,7 @@ em {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
   text-decoration: none;
   cursor: pointer;
 }
@@ -557,7 +557,7 @@ em {
   color: var(--gold);
   font-family: var(--font-body);
   opacity: 0.75;
-  transition: opacity 0.3s var(--ease);
+  transition: opacity 0.3s var(--ease-out);
 }
 
 .sobre-card:hover .card-fotos {
@@ -613,7 +613,7 @@ em {
   overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--gray-200);
-  transition: box-shadow 0.3s var(--ease);
+  transition: box-shadow 0.3s var(--ease-out);
 }
 
 .espaco-card:hover {
@@ -664,7 +664,7 @@ em {
 .carousel-track {
   display: flex;
   height: 100%;
-  transition: transform 0.6s var(--ease);
+  transition: transform 0.6s var(--ease-out);
 }
 
 .carousel-slide {
@@ -766,7 +766,7 @@ em {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s var(--ease);
+  transition: all 0.25s var(--ease-out);
   backdrop-filter: blur(4px);
 }
 
@@ -909,7 +909,7 @@ em {
   border-radius: 4px;
   padding: 1.75rem 1.5rem;
   text-align: center;
-  transition: all 0.3s var(--ease);
+  transition: all 0.3s var(--ease-out);
   backdrop-filter: blur(4px);
 }
 
@@ -959,14 +959,13 @@ em {
   border: 1px solid var(--gray-200);
   position: relative;
   overflow: hidden;
-  transition: all 0.35s var(--ease);
+  transition: all 0.35s var(--ease-out);
 }
 
 .servico-card:hover {
   box-shadow: var(--shadow-md);
   border-color: rgba(201, 168, 76, 0.4);
   background: rgba(201, 168, 76, 0.04);
-  transform: translateY(-3px);
 }
 
 .servico-number {
@@ -988,6 +987,11 @@ em {
   font-size: 1.4rem;
   color: var(--vinho-deep);
   margin-bottom: 0.75rem;
+  transition: padding-left 200ms var(--ease-out);
+}
+
+.servico-card:hover .servico-title {
+  padding-left: 3px;
 }
 
 .servico-desc {
@@ -1060,7 +1064,7 @@ em {
   border: 1px solid var(--gray-200);
   box-shadow: var(--shadow-sm);
   position: relative;
-  transition: all 0.3s var(--ease);
+  transition: all 0.3s var(--ease-out);
 }
 
 .av-card:hover {
@@ -1230,7 +1234,7 @@ em {
   padding: 1.1rem 1.25rem;
   border-radius: 4px;
   text-decoration: none;
-  transition: all 0.3s var(--ease);
+  transition: all 0.3s var(--ease-out);
   border: 1px solid;
 }
 
@@ -1453,7 +1457,7 @@ em {
   gap: 0.5rem;
   text-decoration: none;
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-  transition: all 0.35s var(--ease);
+  transition: all 0.35s var(--ease-out);
   font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -1604,12 +1608,16 @@ em {
   height: 68px;
   object-fit: contain;
   filter: drop-shadow(0 2px 10px rgba(0,0,0,0.5));
-  transition: transform 0.35s var(--ease), filter 0.35s;
+  transition: transform 0.35s var(--ease-out), filter 0.35s var(--ease-out);
 }
 
 .logo:hover .logo-img {
   transform: scale(1.1);
   filter: drop-shadow(0 4px 16px rgba(201,168,76,0.55));
+}
+
+@media (max-width: 767px) {
+  .logo-img { max-height: 80px; }
 }
 
 /* Logo somente imagem — sem texto */
@@ -1787,7 +1795,7 @@ em {
   color: var(--gray-800);
   text-decoration: none;
   box-shadow: var(--shadow-sm);
-  transition: all 0.3s var(--ease);
+  transition: all 0.3s var(--ease-out);
 }
 
 .btn-ver-google:hover {
@@ -1914,6 +1922,75 @@ em {
   background: rgba(201,168,76,0.15);
   transform: translateX(4px);
   box-shadow: var(--shadow-sm);
+}
+
+/* ── Botões de ação (Maps / WhatsApp / Instagram) ── */
+.loc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.loc-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s var(--ease-out);
+  border: 1px solid transparent;
+  flex-shrink: 0;
+}
+
+.loc-maps {
+  background: transparent;
+  border-color: var(--gray-300);
+  color: var(--gray-700);
+}
+.loc-maps:hover {
+  border-color: var(--gold);
+  color: var(--vinho-deep);
+  transform: translateY(-1px);
+}
+
+.loc-whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+.loc-whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37,211,102,0.35);
+}
+
+.loc-instagram {
+  background: transparent;
+  border-color: var(--gray-300);
+  color: var(--gray-700);
+}
+.loc-instagram:hover {
+  border-color: #E1306C;
+  color: #E1306C;
+  transform: translateY(-1px);
+}
+
+.loc-action-logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Logo nos botões do CTA banner */
+.btn-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* ── Responsividade: Localização desktop ── */
