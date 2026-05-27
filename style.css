@@ -430,6 +430,7 @@ em {
   line-height: 1.7;
   max-width: 480px;
 }
+.hero-subtitle-l1 { margin-bottom: 0; }
 
 .hero-actions {
   display: flex;
@@ -945,27 +946,11 @@ em {
   transition: all 0.35s var(--ease);
 }
 
-.servico-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(to bottom, var(--gold), var(--gold-light));
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.4s var(--ease);
-}
-
 .servico-card:hover {
   box-shadow: var(--shadow-md);
-  border-color: rgba(201, 168, 76, 0.3);
+  border-color: rgba(201, 168, 76, 0.4);
+  background: rgba(201, 168, 76, 0.04);
   transform: translateY(-3px);
-}
-
-.servico-card:hover::before {
-  transform: scaleY(1);
 }
 
 .servico-number {
@@ -1591,8 +1576,8 @@ em {
 
 /* ── LOGO COM IMAGEM ── */
 .logo-img {
-  width: 120px;
-  height: 120px;
+  width: auto;
+  height: 68px;
   object-fit: contain;
   filter: drop-shadow(0 2px 10px rgba(0,0,0,0.5));
   transition: transform 0.35s var(--ease), filter 0.35s;

@@ -222,9 +222,10 @@
   function applyTextos(d) {
     const set = (sel, val) => { const el = document.querySelector(sel); if (el && val) el.textContent = val; };
 
-    set('.google-badge-text', d.hero?.badge);
-    set('.hero-eyebrow',      d.hero?.eyebrow);
-    set('.hero-subtitle',     d.hero?.subtitle);
+    set('.google-badge-text',  d.hero?.badge);
+    set('.hero-eyebrow',       d.hero?.eyebrow);
+    set('.hero-subtitle-l1',   d.hero?.subtitle_l1);
+    set('.hero-subtitle-l2',   d.hero?.subtitle_l2);
 
     const descs = document.querySelectorAll('.sobre-desc');
     if (descs[0] && d.sobre?.desc1) descs[0].textContent = d.sobre.desc1;

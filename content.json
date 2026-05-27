@@ -1,8 +1,9 @@
 {
   "hero": {
-    "badge": "4,5 · 386 avaliações no Google",
+    "badge": "4,5 · 388 avaliações no Google",
     "eyebrow": "Dois espaços · Uma experiência única",
-    "subtitle": "Transformamos momentos em memórias eternas.\nAparecida de Goiânia · GO"
+    "subtitle_l1": "Transformamos momentos em memórias eternas.",
+    "subtitle_l2": "Aparecida de Goiânia · GO"
   },
   "sobre": {
     "desc1": "O Recanto Shalon nasceu da paixão por criar eventos que ficam na memória. Com dois espaços cuidadosamente projetados para perfis diferentes de celebração, oferecemos estrutura completa, atendimento personalizado e toda a infraestrutura para que você foque apenas em aproveitar cada momento.",
