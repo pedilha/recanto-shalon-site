@@ -235,16 +235,20 @@
     if (e1Info) {
       const e1Tag  = e1Info.querySelector('.espaco-tag');
       const e1Desc = e1Info.querySelector('.espaco-desc');
-      if (e1Tag  && d.espaco1?.tag)  e1Tag.textContent  = d.espaco1.tag;
-      if (e1Desc && d.espaco1?.desc) e1Desc.textContent = d.espaco1.desc;
+      const e1Cap  = e1Info.querySelector('.espaco-capacity-text');
+      if (e1Tag  && d.espaco1?.tag)      e1Tag.textContent  = d.espaco1.tag;
+      if (e1Desc && d.espaco1?.desc)     e1Desc.textContent = d.espaco1.desc;
+      if (e1Cap  && d.espaco1?.capacity) e1Cap.textContent  = d.espaco1.capacity;
     }
 
     const e2Info = document.querySelector('#e2-title')?.closest('.espaco-info');
     if (e2Info) {
       const e2Tag  = e2Info.querySelector('.espaco-tag');
       const e2Desc = e2Info.querySelector('.espaco-desc');
-      if (e2Tag  && d.espaco2?.tag)  e2Tag.textContent  = d.espaco2.tag;
-      if (e2Desc && d.espaco2?.desc) e2Desc.textContent = d.espaco2.desc;
+      const e2Cap  = e2Info.querySelector('.espaco-capacity-text');
+      if (e2Tag  && d.espaco2?.tag)      e2Tag.textContent  = d.espaco2.tag;
+      if (e2Desc && d.espaco2?.desc)     e2Desc.textContent = d.espaco2.desc;
+      if (e2Cap  && d.espaco2?.capacity) e2Cap.textContent  = d.espaco2.capacity;
     }
   }
 

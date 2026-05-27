@@ -311,6 +311,10 @@
         <input type="text" id="e1-tag" />
       </div>
       <div class="form-group">
+        <label>Capacidade</label>
+        <input type="text" id="e1-capacity" placeholder="Comporta até 200 convidados sentados" />
+      </div>
+      <div class="form-group">
         <label>Descrição</label>
         <textarea id="e1-desc" rows="5"></textarea>
       </div>
@@ -332,6 +336,10 @@
       <div class="form-group">
         <label>Tags / palavras-chave</label>
         <input type="text" id="e2-tag" />
+      </div>
+      <div class="form-group">
+        <label>Capacidade</label>
+        <input type="text" id="e2-capacity" placeholder="Comporta até 230 convidados sentados" />
       </div>
       <div class="form-group">
         <label>Descrição</label>
@@ -690,8 +698,10 @@ function preencherFormularios() {
   setVal('sobre-desc2',   d.sobre?.desc2);
   setVal('e1-tag',        d.espaco1?.tag);
   setVal('e1-desc',       d.espaco1?.desc);
+  setVal('e1-capacity',   d.espaco1?.capacity);
   setVal('e2-tag',        d.espaco2?.tag);
   setVal('e2-desc',       d.espaco2?.desc);
+  setVal('e2-capacity',   d.espaco2?.capacity);
   renderCarousel1();
   renderCarousel2();
 }
@@ -709,12 +719,14 @@ function coletarFormularios() {
     desc2: document.getElementById('sobre-desc2').value,
   };
   dadosEditados.espaco1 = {
-    tag:  document.getElementById('e1-tag').value,
-    desc: document.getElementById('e1-desc').value,
+    tag:      document.getElementById('e1-tag').value,
+    desc:     document.getElementById('e1-desc').value,
+    capacity: document.getElementById('e1-capacity').value,
   };
   dadosEditados.espaco2 = {
-    tag:  document.getElementById('e2-tag').value,
-    desc: document.getElementById('e2-desc').value,
+    tag:      document.getElementById('e2-tag').value,
+    desc:     document.getElementById('e2-desc').value,
+    capacity: document.getElementById('e2-capacity').value,
   };
 }
 

@@ -11,11 +11,13 @@
   },
   "espaco1": {
     "tag": "🌿 Ao ar livre · Rústico · Piscina",
-    "desc": "Um ambiente encantador cercado de natureza, perfeito para quem busca autenticidade e aconchego. Com área arborizada, piscina e charme rústico — ideal para aniversários, confraternizações e celebrações durante o dia."
+    "desc": "Um ambiente encantador cercado de natureza, perfeito para quem busca autenticidade e aconchego. Com área arborizada, piscina e charme rústico — ideal para aniversários, confraternizações e celebrações durante o dia.",
+    "capacity": "Comporta até 200 convidados sentados"
   },
   "espaco2": {
     "tag": "✨ Salão climatizado · Formal · Jardim instagramável",
-    "desc": "Sofisticação e requinte em cada detalhe. Salão fechado, climatizado e com boa acústica, ideal para cerimônias formais. O jardim instagramável é o cenário perfeito para fotos memoráveis de casamentos, formaturas e festas de 15 anos."
+    "desc": "Sofisticação e requinte em cada detalhe. Salão fechado, climatizado e com boa acústica, ideal para cerimônias formais. O jardim instagramável é o cenário perfeito para fotos memoráveis de casamentos, formaturas e festas de 15 anos.",
+    "capacity": "Comporta até 230 convidados sentados"
   },
   "carousel1": [
     {
