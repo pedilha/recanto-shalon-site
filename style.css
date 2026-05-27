@@ -25,8 +25,10 @@
   --cream:        #EDE0CC;
   --gray-100:     #F8F3EE;
   --gray-200:     #E8DDD2;
+  --gray-300:     #C8B4A2;
   --gray-400:     #A89080;
   --gray-600:     #6B5A50;
+  --gray-700:     #4C3C35;
   --gray-800:     #2E1F1A;
   --black:        #1A0F0C;
 
@@ -346,7 +348,7 @@ em {
 .hero {
   position: relative;
   min-height: 100svh;
-    padding-top: 30px;
+  padding-top: 30px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -1032,25 +1034,6 @@ em {
 
 .avaliacoes .container { position: relative; z-index: 2; }
 
-.av-stars-header {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-top: 0.5rem;
-}
-
-.av-stars-header span:first-child {
-  color: var(--gold);
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-}
-
-.av-rating-text {
-  font-size: 0.8rem;
-  color: var(--gray-600);
-  font-weight: 500;
-}
-
 .av-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1197,149 +1180,6 @@ em {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: center;
-}
-
-/* ══════════════════════════════════════════
-   CONTATO
-══════════════════════════════════════════ */
-.contato {
-  padding: var(--section-pad);
-  background: var(--white);
-}
-
-.contato-inner {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
-}
-
-.contato-desc {
-  color: var(--gray-600);
-  line-height: 1.75;
-  margin-bottom: 1.75rem;
-  font-size: 0.97rem;
-}
-
-.contato-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.contato-btn {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.1rem 1.25rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: all 0.3s var(--ease-out);
-  border: 1px solid;
-}
-
-.contato-whatsapp {
-  background: rgba(37, 211, 102, 0.08);
-  border-color: rgba(37, 211, 102, 0.3);
-  color: var(--gray-800);
-}
-
-.contato-whatsapp:hover {
-  background: rgba(37, 211, 102, 0.15);
-  transform: translateX(4px);
-  box-shadow: var(--shadow-sm);
-}
-
-.contato-instagram {
-  background: rgba(138, 36, 56, 0.06);
-  border-color: rgba(138, 36, 56, 0.2);
-  color: var(--gray-800);
-}
-
-.contato-instagram:hover {
-  background: rgba(138, 36, 56, 0.12);
-  transform: translateX(4px);
-  box-shadow: var(--shadow-sm);
-}
-
-.contato-btn-icon {
-  font-size: 1.75rem;
-  flex-shrink: 0;
-}
-
-.contato-btn-title {
-  display: block;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.contato-btn-sub {
-  font-size: 0.78rem;
-  color: var(--gray-400);
-}
-
-/* Card de contato */
-.contato-card {
-  background: var(--vinho-deep);
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.contato-card-header {
-  background: linear-gradient(135deg, var(--vinho) 0%, var(--vinho-mid) 100%);
-  padding: 1.25rem 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: var(--white);
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-}
-
-.contato-card-header .logo-icon {
-  color: var(--gold);
-}
-
-.contato-info-list {
-  list-style: none;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
-}
-
-.contato-info-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-.info-icon {
-  font-size: 1.25rem;
-  flex-shrink: 0;
-  margin-top: 0.1rem;
-}
-
-.contato-info-list strong {
-  display: block;
-  color: var(--gold-light);
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-bottom: 0.2rem;
-}
-
-.contato-info-list p {
-  color: rgba(253, 250, 245, 0.75);
-  font-size: 0.88rem;
-  line-height: 1.5;
-}
-
-.contato-card .btn-gold {
-  margin: 0 1.5rem 1.5rem;
-  width: calc(100% - 3rem);
   justify-content: center;
 }
 
@@ -1879,22 +1719,6 @@ em {
   border: 1px solid var(--gray-200);
 }
 
-/* ── CONTATO: logo no card ── */
-.contato-card-logo {
-  width: 90px;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
-}
-
-.contato-card-header {
-  background: linear-gradient(135deg, var(--vinho) 0%, var(--vinho-mid) 100%);
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* ── FOOTER: logo real ── */
 .footer-logo-img {
   width: 70px;
@@ -1909,19 +1733,6 @@ em {
   color: rgba(253,250,245,0.4);
   margin-top: 0.25rem;
   line-height: 1.5;
-}
-
-/* ── CONTATO: botão de telefone ── */
-.contato-telefone {
-  background: rgba(201,168,76,0.07);
-  border-color: rgba(201,168,76,0.25);
-  color: var(--gray-800);
-}
-
-.contato-telefone:hover {
-  background: rgba(201,168,76,0.15);
-  transform: translateX(4px);
-  box-shadow: var(--shadow-sm);
 }
 
 /* ── Botões de ação (Maps / WhatsApp / Instagram) ── */
