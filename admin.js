@@ -17,7 +17,7 @@
 
   /* ─── Textos padrão ────────────────────────────────────── */
   const DEFAULTS = {
-    heroBadge:   '4,5 · 386 avaliações no Google',
+    heroBadge:   '4,5 · 388 avaliações no Google',
     heroEyebrow: 'Dois espaços · Uma experiência única',
     heroSubtitle:'Transformamos momentos em memórias eternas. Aparecida de Goiânia · GO',
     sobreDesc1:  'O Recanto Shalon nasceu da paixão por criar eventos que ficam na memória. Com dois espaços cuidadosamente projetados para perfis diferentes de celebração, oferecemos estrutura completa, atendimento personalizado e toda a infraestrutura para que você foque apenas em aproveitar cada momento.',
