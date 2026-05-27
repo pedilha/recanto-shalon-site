@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-27T00:00:00Z",
+  "title": "Design System: Recanto Shalon Eventos",
+  "extensions": {
+    "colorMeta": {
+      "vinho-sangue":  { "role": "primary",   "displayName": "Vinho Sangue",  "canonical": "oklch(17% 0.12 13)", "tonalRamp": ["#1A0608","#2E0C10","#4A0F1B","#661424","#7F1A2D","#9B3040","#C07080","#E8B0B8"] },
+      "vinho-tinto":   { "role": "primary",   "displayName": "Vinho Tinto",   "canonical": "oklch(25% 0.14 13)", "tonalRamp": ["#2E0C10","#4A0F1B","#6B1B2A","#8A2438","#A83050","#C06070","#D89098","#F0C8C8"] },
+      "vinho-vivo":    { "role": "primary",   "displayName": "Vinho Vivo",    "canonical": "oklch(33% 0.15 13)", "tonalRamp": ["#4A0F1B","#6B1B2A","#8A2438","#A83050","#C06070","#D09090","#E4B0B0","#F5D5D5"] },
+      "ouro-vela":     { "role": "secondary", "displayName": "Ouro de Vela",  "canonical": "oklch(72% 0.10 82)", "tonalRamp": ["#5A4010","#7A5A1A","#9A7828","#B89040","#C9A84C","#D8BC6A","#E8CC80","#F5E8C0"] },
+      "ouro-claro":    { "role": "secondary", "displayName": "Ouro Claro",    "canonical": "oklch(82% 0.09 82)", "tonalRamp": ["#7A5A1A","#9A7828","#B89040","#C9A84C","#D8BC6A","#E8CC80","#F0DCA0","#F8F0D8"] },
+      "ouro-palido":   { "role": "tertiary",  "displayName": "Ouro Pálido",   "canonical": "oklch(93% 0.04 82)", "tonalRamp": ["#9A7828","#C9A84C","#D8BC6A","#E8CC80","#F0DCA0","#F5E8C0","#FAF2E0","#FEFAF5"] },
+      "branco-quente": { "role": "neutral",   "displayName": "Branco Quente", "canonical": "oklch(98% 0.005 82)", "tonalRamp": ["#C8B4A2","#D8C8B8","#E4D8CC","#EDE8E0","#F2EBE0","#F8F3EE","#FDFAF5","#FFFFFF"] },
+      "cinza-800":     { "role": "neutral",   "displayName": "Cinza 800",     "canonical": "oklch(22% 0.03 30)", "tonalRamp": ["#1A0F0C","#2E1F1A","#4C3C35","#6B5A50","#A89080","#C8B4A2","#E8DDD2","#F8F3EE"] },
+      "preto-quente":  { "role": "neutral",   "displayName": "Preto Quente",  "canonical": "oklch(12% 0.02 30)", "tonalRamp": ["#0A0604","#1A0F0C","#2E1F1A","#4C3C35","#6B5A50","#A89080","#C8B4A2","#E8DDD2"] }
+    },
+    "typographyMeta": {
+      "display":  { "displayName": "Display",  "purpose": "Título principal do hero — uma vez por página. Weight 300 com tamanho extremo; o <em> interno em 600 italic dourado é o único adorno." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos de seção (h2). Nunca uppercase — a caixa alta pertence às labels." },
+      "title":    { "displayName": "Title",    "purpose": "Títulos de cards e artigos (h3). Em itálico dourado quando são nomes próprios de espaços." },
+      "body":     { "displayName": "Body",     "purpose": "Texto corrido. Máximo 65–75ch por linha. cinza-600 sobre fundo claro; rgba(253,250,245,0.7) sobre fundo escuro." },
+      "label":    { "displayName": "Label",    "purpose": "Eyebrows de seção. Sempre em ouro. Precedem cada h2 com 0.75rem de separação." }
+    },
+    "shadows": [
+      { "name": "ambient",    "value": "0 2px 12px rgba(74,15,27,0.12)",  "purpose": "Repouso de cards pequenos. Sinaliza presença sem anunciar." },
+      { "name": "structural", "value": "0 6px 30px rgba(74,15,27,0.18)",  "purpose": "Cards em hover e cards de espaço em repouso. O objeto se levantou." },
+      { "name": "lifted",     "value": "0 16px 60px rgba(74,15,27,0.22)", "purpose": "Hover dos cards de espaço. Pico do sistema — nunca em repouso." },
+      { "name": "gold-glow",  "value": "0 8px 30px rgba(201,168,76,0.5)", "purpose": "Hover do botão primário dourado." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo",  "value": "cubic-bezier(0,0,0.2,1)",     "purpose": "Hovers, reveals, carrossel. Decelera rápido — sensação de resposta imediata." },
+      { "name": "ease-in-out",    "value": "cubic-bezier(0.4,0,0.2,1)",   "purpose": "Abertura/fechamento do header e menu mobile. Simétrico para entradas e saídas." }
+    ],
+    "breakpoints": [
+      { "name": "tablet",  "value": "640px",  "note": "incluso-grid 1→2 colunas, av-grid 1→2" },
+      { "name": "desktop", "value": "900px",  "note": "nav desktop visível, layouts de espaço em 2 colunas, grids de 3 colunas" },
+      { "name": "large",   "value": "1100px", "note": "hero title em 7.5rem fixo" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão Primário (Dourado)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação principal: solicitar orçamento, conhecer espaços. Ouro sobre vinho.",
+      "html": "<button class=\"ds-btn-primary\">SOLICITAR ORÇAMENTO</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.8rem; border-radius: 2px; font-family: 'Jost', system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; background: linear-gradient(135deg, #C9A84C 0%, #E8CC80 100%); color: #4A0F1B; box-shadow: 0 4px 20px rgba(201,168,76,0.35); border: none; cursor: pointer; transition: all 0.3s cubic-bezier(0,0,0.2,1); white-space: nowrap; } .ds-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,168,76,0.5); background: linear-gradient(135deg, #E8CC80 0%, #C9A84C 100%); } .ds-btn-primary:focus-visible { outline: 2px solid #C9A84C; outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Botão Ghost (Outline)",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Ação secundária: ver Instagram, explorar espaços. Transparente com borda dourada.",
+      "html": "<button class=\"ds-btn-ghost\">VER NO INSTAGRAM</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.8rem; border-radius: 2px; font-family: 'Jost', system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; background: transparent; color: #E8CC80; border: 1px solid #C9A84C; cursor: pointer; transition: all 0.3s cubic-bezier(0,0,0.2,1); white-space: nowrap; } .ds-btn-ghost:hover { background: rgba(201,168,76,0.12); transform: translateY(-2px); } .ds-btn-ghost:focus-visible { outline: 2px solid #C9A84C; outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Card de Avaliação",
+      "kind": "card",
+      "refersTo": null,
+      "description": "Depoimento real do Google. Estrelas douradas, texto itálico, avatar colorido.",
+      "html": "<blockquote class=\"ds-av-card\"><div class=\"ds-av-top\"><span class=\"ds-stars\" aria-label=\"5 estrelas\">★★★★★</span><span class=\"ds-google-tag\">Google</span></div><p class=\"ds-av-text\">\"Espaço lindo, equipe muito atenciosa. Fizemos o casamento dos nossos sonhos aqui!\"</p><footer class=\"ds-av-author\"><div class=\"ds-avatar\" style=\"background:linear-gradient(135deg,#7B2D8B,#9B3DAB)\" aria-hidden=\"true\">P</div><div><cite class=\"ds-av-name\">Poliana Couto</cite><p class=\"ds-av-event\">Casamento</p></div></footer></blockquote>",
+      "css": ".ds-av-card { background: #FDFAF5; border-radius: 4px; padding: 1.75rem 1.5rem; border: 1px solid #E8DDD2; box-shadow: 0 2px 12px rgba(74,15,27,0.12); position: relative; transition: all 0.3s cubic-bezier(0,0,0.2,1); } .ds-av-card::before { content: '\\201C'; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 5rem; color: #C9A84C; opacity: 0.12; position: absolute; top: 0.5rem; left: 1rem; line-height: 1; pointer-events: none; } .ds-av-card:hover { box-shadow: 0 6px 30px rgba(74,15,27,0.18); border-color: rgba(201,168,76,0.3); transform: translateY(-2px); } .ds-av-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; } .ds-stars { color: #C9A84C; font-size: 0.9rem; letter-spacing: 2px; } .ds-google-tag { font-family: 'Jost', system-ui, sans-serif; font-size: 0.7rem; font-weight: 500; color: #A89080; } .ds-av-text { font-size: 0.9rem; color: #6B5A50; line-height: 1.75; margin-bottom: 1.25rem; font-style: italic; } .ds-av-author { display: flex; align-items: center; gap: 0.75rem; } .ds-avatar { width: 40px; height: 40px; border-radius: 50%; color: #FDFAF5; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; font-weight: 600; flex-shrink: 0; } .ds-av-name { font-size: 0.88rem; font-weight: 600; color: #2E1F1A; font-style: normal; display: block; } .ds-av-event { font-size: 0.78rem; color: #C9A84C; text-transform: uppercase; letter-spacing: 0.08em; font-family: 'Jost', system-ui, sans-serif; margin: 0; }"
+    },
+    {
+      "name": "Nav CTA",
+      "kind": "nav",
+      "refersTo": "nav-cta",
+      "description": "Link de orçamento no header — único item dourado da navegação.",
+      "html": "<a href=\"#\" class=\"ds-nav-cta\">ORÇAMENTO</a>",
+      "css": ".ds-nav-cta { background: linear-gradient(135deg, #C9A84C, #E8CC80); color: #4A0F1B; padding: 0.55rem 1.2rem; border-radius: 2px; font-family: 'Jost', system-ui, sans-serif; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: box-shadow 0.3s, transform 0.3s; display: inline-block; } .ds-nav-cta:hover { box-shadow: 0 4px 20px rgba(201,168,76,0.4); transform: translateY(-1px); } .ds-nav-cta:focus-visible { outline: 2px solid #C9A84C; outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Tag de Serviço",
+      "kind": "chip",
+      "refersTo": null,
+      "description": "Categoria do serviço — ouro translúcido, tipografia label.",
+      "html": "<span class=\"ds-servico-tag\">Personalizada para o seu estilo</span>",
+      "css": ".ds-servico-tag { display: inline-block; font-family: 'Jost', system-ui, sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #C9A84C; background: rgba(201,168,76,0.1); padding: 0.35rem 0.75rem; border-radius: 2px; border: 1px solid rgba(201,168,76,0.25); }"
+    },
+    {
+      "name": "WhatsApp Float",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Botão flutuante fixo. Entra com fade-in após 2.5s. Hover lift + escala.",
+      "html": "<a href=\"#\" class=\"ds-wa-float\" aria-label=\"Falar pelo WhatsApp\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" fill=\"white\" width=\"28\" height=\"28\"><path d=\"M16 .5C7.44.5.5 7.44.5 16c0 2.73.7 5.35 2.04 7.66L.5 31.5l8.12-2.06A15.43 15.43 0 0016 31.5C24.56 31.5 31.5 24.56 31.5 16S24.56.5 16 .5z\"/></svg><span class=\"ds-wa-text\">Orçamento</span></a>",
+      "css": ".ds-wa-float { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999; background: #25D366; color: white; border-radius: 50px; padding: 0.8rem 1.25rem 0.8rem 0.85rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: all 0.35s cubic-bezier(0,0,0.2,1); font-family: 'Jost', system-ui, sans-serif; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.05em; } .ds-wa-float:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 8px 30px rgba(37,211,102,0.55); background: #1EB956; } .ds-wa-text { color: white; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Álbum de Casamento",
+    "overview": "Este sistema visual foi construído como um álbum de casamento físico: cada seção é uma página, cada cor é uma escolha com peso emocional. O branco não existe — apenas o creme envelhecido do papel texturado. O ouro não é decor — é a borda dourada que separa o ordinário do memorável. O vinho não é escuridão — é a capa de couro que protege o que há dentro.\n\nA tipografia espelha esse objeto: Cormorant Garamond nos títulos com o peso de um convite impresso em papel algodão; Jost no corpo com a limpeza de uma legenda discreta. A hierarquia é dramaticamente escalar — não há dúvida entre o que comanda e o que serve.\n\nO sistema tem um único objetivo por página: mover o visitante em direção ao botão de WhatsApp sem que ele perceba que foi guiado.",
+    "keyCharacteristics": [
+      "Paleta comprometida: vinho profundo como cor dominante, ouro de vela como acento",
+      "Dois pesos extremos (300 e 600) dentro de Cormorant Garamond — sem intermediários",
+      "Elevação tonal: sombras tingidas com vinho, não cinza neutro",
+      "Transições ease-out-expo em hovers e reveals",
+      "Scroll-reveal com delays escalonados de 120ms"
+    ],
+    "rules": [
+      { "name": "A Regra do Acento Único",   "body": "O ouro de vela aparece em no máximo 20% de qualquer tela clara. Sua escassez é o que o torna legível como sinal de qualidade.", "section": "colors" },
+      { "name": "A Regra dos Cremes",         "body": "Nenhuma superfície neutra é branco puro. Todo #FFF vira #FDFAF5. Todo gray genérico vira o creme mais próximo do contexto.", "section": "colors" },
+      { "name": "A Regra das Sombras Tonais", "body": "Toda box-shadow usa rgba(74,15,27,x) como cor da sombra — nunca rgba(0,0,0,x). Sombras cinzas quebram o tom quente.", "section": "elevation" },
+      { "name": "A Regra do Peso Duplo",      "body": "Dentro de Cormorant Garamond, existem apenas dois pesos: 300 (abertura) e 600 (âncora). Weight 400 pertence à Jost.", "section": "typography" },
+      { "name": "A Regra do Flat-at-Rest",    "body": "Superfícies começam planas ou com sombra ambient. Structural e lifted aparecem apenas em hover. Lifted em repouso deixa sem para onde ir.", "section": "elevation" }
+    ],
+    "dos": [
+      "Use #FDFAF5 como background base — nunca #FFFFFF.",
+      "Tinja toda box-shadow com rgba(74,15,27,x) para manter coerência tonal.",
+      "Use cubic-bezier(0,0,0.2,1) em hovers e reveals; reserve cubic-bezier(0.4,0,0.2,1) para o menu mobile.",
+      "Sempre preceda um h2 com uma label Jost uppercase ouro.",
+      "Use o gradiente dourado exclusivamente em botões primários e no nav-cta.",
+      "Diferencie os dois espaços: tons terrosos para o rústico, vinho-deep para o sofisticado.",
+      "Respeite prefers-reduced-motion — não introduza animações JS sem checar a media query."
+    ],
+    "donts": [
+      "Não use background-clip: text com gradiente. Títulos recebem cor sólida.",
+      "Não use border-left maior que 1px como faixa decorativa colorida. Nunca.",
+      "Não use glassmorphism decorativo — backdrop-filter existe apenas sobre fotografias.",
+      "Não use Cormorant Garamond em weight 400 — só 300 e 600.",
+      "Não repita ícone + título + texto em grid idêntico para mais de 4 cards sem diferenciar.",
+      "Não crie a sensação de buffet genérico, venue americano, template corporativo nem estética influencer.",
+      "Não use bounce ou elastic. O sistema desliza — não pula."
+    ]
+  }
+}
