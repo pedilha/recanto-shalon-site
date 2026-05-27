@@ -824,6 +824,16 @@ em {
   letter-spacing: 0.05em;
 }
 
+.espaco-capacity {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+.espaco-capacity svg { flex-shrink: 0; }
+
 .espaco-desc {
   color: var(--gray-600);
   line-height: 1.75;
