@@ -398,4 +398,40 @@
     document.head.appendChild(style);
   }
 
+  /* ─────────────────────────────────────────────
+     10. LGPD COOKIE BANNER
+  ───────────────────────────────────────────── */
+  const cookieBanner = document.getElementById('cookie-banner');
+  const cookieAccept = document.getElementById('cookie-accept');
+
+  if (cookieBanner && cookieAccept) {
+    const CONSENT_KEY = 'lgpd-consent';
+
+    function hideBanner() {
+      cookieBanner.classList.remove('visible');
+      document.body.classList.remove('cookie-visible');
+      if (waFloat) waFloat.style.bottom = '';
+    }
+
+    function showBanner() {
+      cookieBanner.classList.add('visible');
+      document.body.classList.add('cookie-visible');
+      // Empurra o botão WhatsApp acima do banner
+      if (waFloat) {
+        const bannerH = cookieBanner.offsetHeight;
+        waFloat.style.bottom = (bannerH + 16) + 'px';
+      }
+    }
+
+    if (!localStorage.getItem(CONSENT_KEY)) {
+      setTimeout(showBanner, 1500);
+    }
+
+    cookieAccept.addEventListener('click', () => {
+      localStorage.setItem(CONSENT_KEY, 'true');
+      hideBanner();
+    });
+  }
+
+
 })(); // IIFE: encapsula todo o código

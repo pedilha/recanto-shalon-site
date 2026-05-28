@@ -1315,6 +1315,83 @@ em {
 }
 
 /* ══════════════════════════════════════════
+   LGPD COOKIE BANNER
+══════════════════════════════════════════ */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  background: var(--vinho-deep);
+  border-top: 1px solid rgba(201, 168, 76, 0.25);
+  padding: 0.9rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  transform: translateY(100%);
+  transition: transform 0.45s var(--ease-out);
+}
+
+.cookie-banner.visible {
+  transform: translateY(0);
+}
+
+.cookie-text {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: rgba(253, 250, 245, 0.7);
+  line-height: 1.55;
+  flex: 1;
+  min-width: 220px;
+  margin: 0;
+}
+
+.cookie-link {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+.cookie-link:hover {
+  color: var(--gold-light);
+}
+
+.cookie-btn {
+  background: var(--gold);
+  color: var(--vinho-deep);
+  border: none;
+  padding: 0.5rem 1.4rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s var(--ease-out);
+}
+
+.cookie-btn:hover {
+  background: var(--gold-light);
+}
+
+.cookie-btn:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 3px;
+}
+
+/* Empurra o botão WhatsApp acima do banner quando visível */
+body.cookie-visible .whatsapp-float {
+  transition: bottom 0.45s var(--ease-out), transform 0.35s var(--ease-out),
+              box-shadow 0.35s var(--ease-out), background 0.2s;
+}
+
+/* ══════════════════════════════════════════
    RESPONSIVIDADE — TABLET (≥ 640px)
 ══════════════════════════════════════════ */
 @media (min-width: 640px) {
