@@ -207,7 +207,7 @@
   async function applyCMS() {
     let data;
     try {
-      const r = await fetch('content.json?v=' + Date.now());
+      const r = await fetch('content.json');
       if (!r.ok) return;
       data = await r.json();
     } catch (e) {
@@ -317,6 +317,7 @@
 
   function handleHeroParallax() {
     if (window.innerWidth < 900 || !heroBg) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const scrollY = window.scrollY;
     heroBg.style.transform = `translateY(${scrollY * 0.3}px)`;
   }
@@ -357,9 +358,7 @@
     });
 
     navLinks.forEach(link => {
-      link.style.color = link.getAttribute('href') === current
-        ? 'var(--gold-light)'
-        : '';
+      link.classList.toggle('nav-active', link.getAttribute('href') === current);
     });
   }
 

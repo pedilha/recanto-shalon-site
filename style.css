@@ -256,7 +256,8 @@ em {
   transition: color 0.25s;
 }
 
-.nav-desktop a:hover {
+.nav-desktop a:hover,
+.nav-desktop a.nav-active {
   color: var(--gold-light);
 }
 
