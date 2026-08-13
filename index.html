@@ -8,44 +8,34 @@
 
   <!-- Open Graph / compartilhamento social -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://recantoshalon.com.br" />
+  <meta property="og:url"         content="https://recantoshaloneventos.com.br" />
   <meta property="og:locale"      content="pt_BR" />
   <meta property="og:title"       content="Recanto Shalon Eventos | Aparecida de Goiânia" />
   <meta property="og:description" content="Dois espaços únicos para casamentos, aniversários, formaturas e confraternizações em Aparecida de Goiânia. Avaliação 4,5 ★ no Google." />
-  <meta property="og:image"       content="https://recantoshalon.com.br/assets/img/hero-bg-1280w.jpg" />
+  <meta property="og:image"       content="https://recantoshaloneventos.com.br/assets/img/hero-bg-1280w.jpg" />
   <meta property="og:image:width"  content="1280" />
   <meta property="og:image:height" content="720" />
-  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Recanto Shalon Eventos | Aparecida de Goiânia" />
+  <meta name="twitter:description" content="Dois espaços únicos para casamentos, aniversários, formaturas e confraternizações em Aparecida de Goiânia. Avaliação 4,5 ★ no Google." />
+  <meta name="twitter:image"       content="https://recantoshaloneventos.com.br/assets/img/hero-bg-1280w.jpg" />
+
+  <link rel="canonical" href="https://recantoshaloneventos.com.br/" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="apple-touch-icon"    href="/logo.png" />
+  <link rel="apple-touch-icon"    href="/assets/apple-touch-icon.png" />
 
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV1GLSNNJL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FV1GLSNNJL');
-  </script>
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wyapsc15k7");
-  </script>
+  <!-- Google Analytics 4 + Microsoft Clarity: carregados sob consentimento LGPD,
+       ver bloco "ANALYTICS SOB CONSENTIMENTO" em script.js -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="preload" as="image"
-    href="assets/img/hero-bg-1920w.jpg"
-    imagesrcset="assets/img/hero-bg-768w.jpg 768w, assets/img/hero-bg-1280w.jpg 1280w, assets/img/hero-bg-1920w.jpg 1920w"
+  <link rel="preload" as="image" type="image/webp"
+    href="assets/img/hero-bg-1920w.webp"
+    imagesrcset="assets/img/hero-bg-768w.webp 768w, assets/img/hero-bg-1280w.webp 1280w, assets/img/hero-bg-1920w.webp 1920w"
     imagesizes="100vw">
 
   <!-- Dados estruturados: LocalBusiness (Google Rich Results) -->
@@ -55,7 +45,7 @@
     "@type": "LocalBusiness",
     "name": "Recanto Shalon Eventos",
     "description": "Venue de eventos com dois espaços únicos em Aparecida de Goiânia: ambiente rústico ao ar livre e salão climatizado sofisticado. Ideal para casamentos, aniversários, formaturas e confraternizações.",
-    "url": "https://recantoshalon.com.br",
+    "url": "https://recantoshaloneventos.com.br",
     "telephone": ["+556232846097", "+5562982705533"],
     "address": {
       "@type": "PostalAddress",
@@ -78,7 +68,7 @@
       "bestRating": "5",
       "worstRating": "1"
     },
-    "image": "https://recantoshalon.com.br/assets/img/hero-bg-1920w.jpg",
+    "image": "https://recantoshaloneventos.com.br/assets/img/hero-bg-1920w.jpg",
     "sameAs": [
       "https://www.instagram.com/recantoshaloneventos"
     ]
@@ -129,6 +119,10 @@
   <section class="hero" id="hero" aria-label="Apresentação principal">
     <div class="hero-bg" aria-hidden="true">
       <picture class="hero-bg-img">
+        <source
+          srcset="assets/img/hero-bg-768w.webp 768w, assets/img/hero-bg-1280w.webp 1280w, assets/img/hero-bg-1920w.webp 1920w"
+          sizes="100vw"
+          type="image/webp">
         <source
           srcset="assets/img/hero-bg-768w.jpg 768w, assets/img/hero-bg-1280w.jpg 1280w, assets/img/hero-bg-1920w.jpg 1920w"
           sizes="100vw"
@@ -218,16 +212,29 @@
         <div class="espaco-layout">
           <div class="espaco-carousel" aria-label="Imagens do Recanto Shalon 1">
             <div class="carousel-track" id="carousel-1">
-              <div class="carousel-slide slide-rustico-1" role="img" aria-label="Cerimônia no espaço">
+              <div class="carousel-slide" role="img" aria-label="Cerimônia no espaço">
+                <picture>
+                  <source srcset="fotos-recanto1/ceremonia-no-espa%C3%A7o.webp" type="image/webp">
+                  <img src="fotos-recanto1/ceremonia-no-espa%C3%A7o.JPG" alt="" loading="lazy" class="carousel-slide-img">
+                </picture>
                 <div class="slide-overlay"><span class="slide-caption">Cerimônia no espaço</span></div>
               </div>
-              <div class="carousel-slide slide-rustico-2" role="img" aria-label="Espaço decorado">
+              <div class="carousel-slide" role="img" aria-label="Espaço decorado">
+                <picture>
+                  <source srcset="fotos-recanto1/espa%C3%A7o-decorado.webp" type="image/webp">
+                  <img src="fotos-recanto1/espa%C3%A7o-decorado.JPG" alt="" loading="lazy" class="carousel-slide-img">
+                </picture>
                 <div class="slide-overlay"><span class="slide-caption">Espaço decorado</span></div>
               </div>
-              <div class="carousel-slide slide-rustico-3" role="img" aria-label="Festa no espaço">
+              <div class="carousel-slide" role="img" aria-label="Festa no espaço">
+                <img src="fotos-recanto1/festa-no-espa%C3%A7o.webp" alt="" loading="lazy" class="carousel-slide-img">
                 <div class="slide-overlay"><span class="slide-caption">Festa no espaço</span></div>
               </div>
-              <div class="carousel-slide slide-rustico-4" role="img" aria-label="Área da piscina">
+              <div class="carousel-slide" role="img" aria-label="Área da piscina">
+                <picture>
+                  <source srcset="fotos-recanto1/piscina.webp" type="image/webp">
+                  <img src="fotos-recanto1/piscina.JPG" alt="" loading="lazy" class="carousel-slide-img">
+                </picture>
                 <div class="slide-overlay"><span class="slide-caption">Área da piscina</span></div>
               </div>
             </div>
@@ -288,13 +295,25 @@
           </div>
           <div class="espaco-carousel" aria-label="Imagens do Recanto Shalon 2">
             <div class="carousel-track" id="carousel-2">
-              <div class="carousel-slide slide-sofisticado-1" role="img" aria-label="Salão climatizado decorado">
+              <div class="carousel-slide" role="img" aria-label="Salão climatizado decorado">
+                <picture>
+                  <source srcset="fotos-recanto2/salao-climatizado.webp" type="image/webp">
+                  <img src="fotos-recanto2/salao-climatizado.JPG" alt="" loading="lazy" class="carousel-slide-img">
+                </picture>
                 <div class="slide-overlay"><span class="slide-caption">Salão climatizado e elegante</span></div>
               </div>
-              <div class="carousel-slide slide-sofisticado-2" role="img" aria-label="Jardim instagramável">
+              <div class="carousel-slide" role="img" aria-label="Jardim instagramável">
+                <picture>
+                  <source srcset="fotos-recanto2/jardim.webp" type="image/webp">
+                  <img src="fotos-recanto2/jardim.JPG" alt="" loading="lazy" class="carousel-slide-img">
+                </picture>
                 <div class="slide-overlay"><span class="slide-caption">Jardim instagramável exclusivo</span></div>
               </div>
-              <div class="carousel-slide slide-sofisticado-3" role="img" aria-label="Mesa posta para evento">
+              <div class="carousel-slide" role="img" aria-label="Mesa posta para evento">
+                <picture>
+                  <source srcset="fotos-recanto2/mesa-posta.webp" type="image/webp">
+                  <img src="fotos-recanto2/mesa-posta.JPG" alt="" loading="lazy" class="carousel-slide-img">
+                </picture>
                 <div class="slide-overlay"><span class="slide-caption">Mesa posta com requinte</span></div>
               </div>
             </div>

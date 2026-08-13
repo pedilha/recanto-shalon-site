@@ -1,0 +1,17 @@
+# IDE / editor
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node (scripts locais, ex.: geração de imagens — não fazem parte do site)
+node_modules/
+package-lock.json
+
+# Logs
+*.log

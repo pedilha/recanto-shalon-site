@@ -262,9 +262,30 @@
       el.className = 'carousel-slide';
       el.setAttribute('role', 'img');
       el.setAttribute('aria-label', slide.legenda || 'Foto do espaço');
-      el.style.backgroundImage    = `url('${slide.foto}')`;
-      el.style.backgroundSize     = 'cover';
-      el.style.backgroundPosition = 'center';
+
+      const isJpg = /\.(jpe?g)$/i.test(slide.foto);
+      if (isJpg) {
+        const picture = document.createElement('picture');
+        const source = document.createElement('source');
+        source.type = 'image/webp';
+        source.srcset = slide.foto.replace(/\.(jpe?g)$/i, '.webp');
+        const img = document.createElement('img');
+        img.src = slide.foto;
+        img.alt = '';
+        img.loading = 'lazy';
+        img.className = 'carousel-slide-img';
+        picture.appendChild(source);
+        picture.appendChild(img);
+        el.appendChild(picture);
+      } else {
+        const img = document.createElement('img');
+        img.src = slide.foto;
+        img.alt = '';
+        img.loading = 'lazy';
+        img.className = 'carousel-slide-img';
+        el.appendChild(img);
+      }
+
       const overlay = document.createElement('div');
       overlay.className = 'slide-overlay';
       const caption = document.createElement('span');
@@ -399,7 +420,35 @@
   }
 
   /* ─────────────────────────────────────────────
-     10. LGPD COOKIE BANNER
+     10. ANALYTICS SOB CONSENTIMENTO (LGPD)
+        GA4 e Clarity só são injetados depois que o
+        visitante aceita o banner de cookies — nunca antes.
+  ───────────────────────────────────────────── */
+  function loadAnalytics() {
+    if (window.__analyticsLoaded) return;
+    window.__analyticsLoaded = true;
+
+    // Google Analytics 4
+    const ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-FV1GLSNNJL';
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-FV1GLSNNJL');
+
+    // Microsoft Clarity
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', 'wyapsc15k7');
+  }
+
+  /* ─────────────────────────────────────────────
+     11. LGPD COOKIE BANNER
   ───────────────────────────────────────────── */
   const cookieBanner = document.getElementById('cookie-banner');
   const cookieAccept = document.getElementById('cookie-accept');
@@ -423,13 +472,16 @@
       }
     }
 
-    if (!localStorage.getItem(CONSENT_KEY)) {
+    if (localStorage.getItem(CONSENT_KEY) === 'true') {
+      loadAnalytics();
+    } else {
       setTimeout(showBanner, 1500);
     }
 
     cookieAccept.addEventListener('click', () => {
       localStorage.setItem(CONSENT_KEY, 'true');
       hideBanner();
+      loadAnalytics();
     });
   }
 

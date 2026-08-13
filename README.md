@@ -2,7 +2,7 @@
 
 Site institucional do Recanto Shalon, venue de eventos em Aparecida de Goiânia (GO). Dois espaços — rústico ao ar livre e salão climatizado — apresentados em uma única página projetada para converter visitantes em contatos via WhatsApp.
 
-**[recantoshalon.com.br](https://recantoshalon.com.br)**
+**[recantoshaloneventos.com.br](https://recantoshaloneventos.com.br)**
 
 ---
 
@@ -24,9 +24,7 @@ recanto-shalon/
 ├── script.js           # Comportamentos (menu, galeria, scroll, reveals)
 ├── content.json        # Conteúdo editável (avaliações, galeria)
 ├── logo.png            # Logotipo principal
-├── admin.html          # Painel CMS (GitHub API)
-├── admin.css
-├── admin.js
+├── admin.html          # Painel CMS (GitHub API, login + estilos inline)
 ├── assets/
 │   ├── img/            # Imagens estáticas referenciadas no HTML
 │   ├── logo_wpp.png

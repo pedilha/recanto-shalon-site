@@ -679,48 +679,21 @@ em {
   background-position: center;
 }
 
-/* Slides — Espaço 1 (Rústico) */
-.slide-rustico-1 {
-  background-image: url('fotos-recanto1/ceremonia-no-espa%C3%A7o.JPG');
-  background-size: cover;
-  background-position: center;
+/* Foto real de cada slide (substitui background-image por <img loading="lazy">) */
+.carousel-slide-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
 
-.slide-rustico-2 {
-  background-image: url('fotos-recanto1/espa%C3%A7o-decorado.JPG');
-  background-size: cover;
-  background-position: center;
-}
-
-.slide-rustico-3 {
-  background-image: url('fotos-recanto1/festa-no-espa%C3%A7o.webp');
-  background-size: cover;
-  background-position: center;
-}
-
-.slide-rustico-4 {
-  background-image: url('fotos-recanto1/piscina.JPG');
-  background-size: cover;
-  background-position: center;
-}
-
-/* Slides — Espaço 2 (Sofisticado) */
-.slide-sofisticado-1 {
-  background-image: url('fotos-recanto2/salao-climatizado.JPG');
-  background-size: cover;
-  background-position: center;
-}
-
-.slide-sofisticado-2 {
-  background-image: url('fotos-recanto2/jardim.JPG');
-  background-size: cover;
-  background-position: center;
-}
-
-.slide-sofisticado-3 {
-  background-image: url('fotos-recanto2/mesa-posta.JPG');
-  background-size: cover;
-  background-position: center;
+.carousel-slide picture {
+  position: absolute;
+  inset: 0;
+  display: block;
 }
 
 /* Overlay e caption em cada slide */

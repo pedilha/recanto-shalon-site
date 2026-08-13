@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "recanto-shalon",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3000", "."],
+      "runtimeExecutable": "http-server",
+      "runtimeArgs": ["-p", "3000", "-c-1", "C:/dev/recanto-shalon"],
       "port": 3000
     }
   ]
