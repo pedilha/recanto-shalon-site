@@ -22,7 +22,7 @@ colors:
 typography:
   display:
     fontFamily: "Cormorant Garamond, Georgia, serif"
-    fontSize: "clamp(3.2rem, 10vw, 7rem)"
+    fontSize: "clamp(2.75rem, 8vw, 5.75rem)"
     fontWeight: 300
     lineHeight: 1.0
     letterSpacing: "-0.01em"
@@ -145,7 +145,7 @@ Uma paleta comprometida com dois papéis: o vinho sustenta as superfícies de id
 **Character:** Cormorant carrega a seriedade de um convite impresso em papel algodão — serifes finos, italic com personalidade, diferença dramática entre os pesos. Jost não compete: é a legenda no verso da foto, direta e útil. As duas fontes nunca disputam atenção.
 
 ### Hierarchy
-- **Display** (weight 300, `clamp(3.2rem, 10vw, 7rem)`, line-height 1.0): O título principal do hero — aparece uma única vez por página. O weight 300 extremamente leve em tamanho extremamente grande cria o contraste central. O `<em>` interno em weight 600 italic com cor dourada é o único adorno permitido dentro do display.
+- **Display** (weight 300, `clamp(2.75rem, 8vw, 5.75rem)`, line-height 1.0): O título principal do hero — aparece uma única vez por página. O weight 300 extremamente leve em tamanho extremamente grande cria o contraste central. O `<em>` interno em weight 600 italic com cor dourada é o único adorno permitido dentro do display.
 - **Headline** (weight 600, `clamp(1.9rem, 4.5vw, 2.8rem)`, line-height 1.2): Títulos de seção (`h2`). Nunca em uppercase — a caixa alta pertence exclusivamente às labels.
 - **Title** (weight 600, `clamp(1.5rem, 3.5vw, 2rem)`, line-height 1.2): Títulos de cards e artigos (`h3`). Em itálico dourado quando são nomes próprios de espaços.
 - **Body** (weight 400, `1rem`, line-height 1.6): Texto corrido. Máximo 65–75 caracteres por linha. Cor `cinza-600` sobre fundos claros; `rgba(253,250,245,0.7)` sobre fundos escuros.
