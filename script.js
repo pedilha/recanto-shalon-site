@@ -233,7 +233,7 @@
 
     const e1Info = document.querySelector('#e1-title')?.closest('.espaco-info');
     if (e1Info) {
-      const e1Tag  = e1Info.querySelector('.espaco-tag');
+      const e1Tag  = e1Info.querySelector('.espaco-tag-text');
       const e1Desc = e1Info.querySelector('.espaco-desc');
       const e1Cap  = e1Info.querySelector('.espaco-capacity-text');
       if (e1Tag  && d.espaco1?.tag)      e1Tag.textContent  = d.espaco1.tag;
@@ -243,7 +243,7 @@
 
     const e2Info = document.querySelector('#e2-title')?.closest('.espaco-info');
     if (e2Info) {
-      const e2Tag  = e2Info.querySelector('.espaco-tag');
+      const e2Tag  = e2Info.querySelector('.espaco-tag-text');
       const e2Desc = e2Info.querySelector('.espaco-desc');
       const e2Cap  = e2Info.querySelector('.espaco-capacity-text');
       if (e2Tag  && d.espaco2?.tag)      e2Tag.textContent  = d.espaco2.tag;
