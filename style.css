@@ -258,8 +258,8 @@ em {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 
 .logo {
