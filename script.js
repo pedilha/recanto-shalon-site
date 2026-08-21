@@ -421,23 +421,24 @@
 
   /* ─────────────────────────────────────────────
      10. ANALYTICS SOB CONSENTIMENTO (LGPD)
-        GA4 e Clarity só são injetados depois que o
-        visitante aceita o banner de cookies — nunca antes.
+        A tag do GA4 já carrega no <head> (Consent Mode v2),
+        mas começa com consentimento negado. Aqui só liberamos
+        o consentimento e injetamos o Clarity — nunca antes
+        de o visitante aceitar o banner de cookies.
   ───────────────────────────────────────────── */
   function loadAnalytics() {
     if (window.__analyticsLoaded) return;
     window.__analyticsLoaded = true;
 
-    // Google Analytics 4
-    const ga = document.createElement('script');
-    ga.async = true;
-    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-FV1GLSNNJL';
-    document.head.appendChild(ga);
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', 'G-FV1GLSNNJL');
+    // Google Analytics 4: libera o consentimento (tag já carregada no <head>)
+    if (window.gtag) {
+      window.gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+      });
+    }
 
     // Microsoft Clarity
     (function (c, l, a, r, i, t, y) {

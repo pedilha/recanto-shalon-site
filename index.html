@@ -26,7 +26,26 @@
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="apple-touch-icon"    href="/assets/apple-touch-icon.png" />
 
-  <!-- Google Analytics 4 + Microsoft Clarity: carregados sob consentimento LGPD,
+  <!-- Google Analytics 4 (Consent Mode v2): a tag carrega desde já para ser
+       detectável (ex.: verificação do Google Ads), mas com consentimento
+       negado por padrão. Só é liberada após aceite no banner LGPD
+       (ver bloco "ANALYTICS SOB CONSENTIMENTO" em script.js). -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-FV1GLSNNJL');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV1GLSNNJL"></script>
+
+  <!-- Microsoft Clarity: carregado sob consentimento LGPD,
        ver bloco "ANALYTICS SOB CONSENTIMENTO" em script.js -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
