@@ -486,5 +486,21 @@
     });
   }
 
+  /* ─────────────────────────────────────────────
+     12. EVENTO DE CONVERSÃO: CLIQUE NO WHATSAPP
+        Dispara um evento no GA4 sempre que o visitante
+        clica em qualquer link do WhatsApp (float, CTAs,
+        botão de localização etc). Marcar "whatsapp_click"
+        como evento-chave no GA4 e importar como conversão
+        no Google Ads (ver instruções no chat).
+  ───────────────────────────────────────────── */
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href*="wa.me"]');
+    if (!link || typeof window.gtag !== 'function') return;
+    window.gtag('event', 'whatsapp_click', {
+      event_category: 'contato',
+      event_label: link.getAttribute('aria-label') || link.className || 'whatsapp'
+    });
+  });
 
 })(); // IIFE: encapsula todo o código
